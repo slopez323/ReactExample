@@ -52,21 +52,24 @@ const MyInfoComponent = () => {
       <label>New Movie 1 &nbsp;
         <input type='text' onChange={(event) => {
           const newMovie = event.target.value;
-          setFaveMovies([newMovie, faveMovies[1], faveMovies[2]])
+          faveMovies.splice(0,1,newMovie);
+          setFaveMovies([...faveMovies]);
         }}>
         </input>
       </label> &nbsp;
       <label>New Movie 2 &nbsp;
         <input type='text' onChange={(event) => {
           const newMovie = event.target.value;
-          setFaveMovies([faveMovies[0], newMovie, faveMovies[2]])
+          faveMovies.splice(1,1,newMovie);
+          setFaveMovies([...faveMovies]);
         }}>
         </input>
       </label> &nbsp;
       <label>New Movie 3 &nbsp;
         <input type='text' onChange={(event) => {
           const newMovie = event.target.value;
-          setFaveMovies([faveMovies[0], faveMovies[1], newMovie])
+          faveMovies.splice(2,1,newMovie);
+          setFaveMovies([...faveMovies]);
         }}>
         </input>
       </label>
