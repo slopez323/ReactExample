@@ -31,8 +31,7 @@ const MyInfoComponent = () => {
   return (
     <div>
       <p>{myName}</p>
-      <p>{faveColor}</p>
-      {/* <p>{faveMovies}</p> */}
+      <p style={{backgroundColor: faveColor}}>{faveColor}</p>
       {faveMovies.map(movie => <span>{movie} &nbsp;</span>)}
       <br></br><br></br>
       <label>New Name &nbsp;
